@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+input,
+button {
+  font-size: 15px;
+}
+
+.head_bar {
+  background-color: #df548e;
+  color: #ffffff;
+  margin: 30px;
+  border: 3px solid black;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+}
+
+main {
+  background-color: #ffffff;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 16px;
+  position: relative;
+}
+
+.custom-header {
+  text-align: center;
+  padding: 50px 30px;
+}
+.custom-header .custom-header-title {
+  font-family: "Comfortaa", cursive;
+}
+.custom-header .custom-header-title h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.custom-header .custom-header-title h4 {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+
+.custom-masukan {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+.custom-masukan .kanan {
+  display: flex;
+  justify-content: flex-end;
+}
+.custom-masukan .kanan p {
+  font-family: "Comfortaa", cursive;
+  color: #eeeeee;
+  background-color: #df548e;
+  padding: 5px 20px;
+  border: 3px solid black;
+  border-radius: 3px;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+  margin-bottom: -1px;
+}
+
+@media screen and (max-width: 500px) {
+  p.btn-keterangan {
+    font-size: 11px;
+  }
+}
+
+.btn-keterangan {
+  margin: 0;
+}
+
+.custom-masukan .card, .card-item {
+  margin-top: -3px;
+  justify-content: center;
+  border: 3px solid black;
+  background-color: #f1f0f0;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+  border-radius: 3px;
+}
+
+.custom-masukan .card .card-body .card-text {
+  margin-top: -5px;
+  margin-left: -30px;
+}
+
+.card-bodyBook, .card-bodyBook-item {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+h3 {
+  margin-bottom: 16px;
+}
+
+.custom-cariBuku {
+  padding-top: 45px;
+  padding-bottom: 5px;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-cariBuku .kanan {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-cariBuku .kanan p {
+  font-family: "Comfortaa", cursive;
+  background-color: #3cc4ce;
+  color: #ffffff;
+  padding: 5px 20px;
+  border: 3px solid black;
+  border-radius: 3px;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+  margin-bottom: -1px;
+}
+
+.custom-cariBuku .card, .card-item {
+  margin-top: -3px;
+  justify-content: center;
+  border: 3px solid black;
+  background-color: #f1f0f0;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+}
+
+.custom-bookItem {
+  padding-top: 45px;
+  padding-bottom: 5px;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-bookItem .card, .card-item {
+  justify-content: center;
+  border: 3px solid black;
+  background-color: #f1f0f0;
+  box-shadow: 7px 7px 0px 1px rgb(20, 20, 20);
+}
+
+.card > .card-bodyBook > .book_list > .book_item {
+  width: 100px;
+}
+
+.cardButtonCheck {
+  width: auto;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finished-button {
+  background: url("../assets/finished-before.svg");
+  background-size: contain;
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.finished-button:hover {
+  background: url("../assets/finished.svg");
+  background-size: contain;
+}
+
+.finished-button:focus, .undo-button:focus,.trash-button:focus, .edit-btn:focus, .done-btn:focus {
+  outline: none;
+}
+
+.trash-button {
+  background: url("../assets/remove-before.svg");
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin: 20px 0px 20px 10px;
+  cursor: pointer;
+  border: none;
+  align-content: flex-end;
+}
+
+.trash-button:hover {
+  background: url("../assets/remove.svg");
+  background-size: contain;
+}
+
+.undo-button {
+  background: url("../assets/undo.svg");
+  background-size: contain;
+  display: flexbox;
+  width: 55px;
+  height: 55px;
+  margin: 20px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.undo-button:hover {
+  background: url("../assets/undo-before.svg");
+  background-size: contain;
+}
+
+.edit-btn {
+  background: url("../assets/edit-before.svg");
+  background-size: contain;
+  display: flexbox;
+  width: 40px;
+  height: 40px;
+  margin: 20px 20px 20px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+.edit-btn:hover {
+  background: url("../assets/edit.svg");
+  background-size: contain;
+}
+
+.done-btn {
+  background: url("../assets/done.svg");
+  background-size: contain;
+  display: flexbox;
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px 20px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+.done-btn:hover {
+  background: url("../assets/done-before.svg");
+  background-size: contain;
+}
+
+/* footer */
+.custom-footer {
+  padding-top: 100px;
+  max-width: 700px;
+}
+
+.custom-footer .kiri .card-text {
+  margin-bottom: 1px;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 236, 236);
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+
+

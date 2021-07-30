@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Rahmat Pangestu Widodo" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="/assets/read.svg" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My Library Apps<</title>
+  </head>
+  <body>
+    <header class="head_bar">
+      <!-- Header -->
+      <div class="container custom-header">
+        <div class="custom-header-title">
+          <h1 class="display-5">My Library Apps</h1>
+          <h4>🕮 Ayo Baca Bukumu !! 🕮</h4>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- memasukan buku -->
+      <div class="container custom-masukan">
+        <div class="col-md-12 col-sm-12 col-12">
+          <div class="kanan">
+            <p class="font-weight-bold">Masukan Buku Baru</p>
+          </div>
+          <form class="form" action="#" id="form">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text"></p>
+                <form id="inputBook">
+                  <div class="form-group">
+                    <label for="inputBookTitle">Judul</label>
+                    <input
+                      id="inputBookTitle"
+                      class="form-control border border-secondary"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputBookAuthor">Penulis</label>
+                    <input
+                      id="inputBookAuthor"
+                      class="form-control border border-secondary"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputBookYear">Tahun</label>
+                    <input
+                      id="inputBookYear"
+                      class="form-control border border-secondary"
+                      type="number"
+                      required
+                    />
+                  </div>
+                  <div class="input_inline">
+                    <label for="inputBookIsComplete">Selesai dibaca</label>
+                    <input id="inputBookIsComplete" type="checkbox" />
+                  </div>
+                  <button
+                    id="bookSubmit"
+                    class="btn btn-secondary btn-lg btn-block"
+                    type="submit"
+                  >
+                    <p class="btn-keterangan">
+                      Masukkan Buku ke rak
+                      <span><b>Belum selesai dibaca</b></span>
+                    </p>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Cari buku -->
+      <div class="container custom-cariBuku">
+        <div class="col-md-12 col-sm-12 col-12">
+          <div class="kanan">
+            <p class="font-weight-bold">Cari Buku (Opsional)</p>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <form class="form-inline" id="searchBook">
+                <div>
+                  <label class="mb-2" for="searchBookTitle">Judul</label>
+                </div>
+                <div class="form-group col-sm-8 mb-2">
+                  <input
+                    type="text"
+                    name="search-Book"
+                    class="form-control w-100"
+                    id="searchBook-Title"
+                    placeholder="Masukan judul buku..."
+                  />
+                </div>
+
+                <div>
+                  <button
+                    id="searchSubmit"
+                    class="btn btn-secondary mb-2"
+                    type="submit"
+                  >
+                    Cari Buku
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Belum selesai dibaca -->
+      <div class="container custom-bookItem">
+        <div class="col-md-12 col-sm-12 col-12 pageBookItem">
+          <h2>Belum selesai dibaca</h2>
+          <div class="list-BookItem" id="notFinished-read"></div>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="container custom-bookItem">
+        <div class="col-md-12 col-sm-12 col-12 pageBookItem">
+          <h2>Selesai dibaca</h2>
+          <div class="list-BookItem" id="finished-read"></div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="card-body text-center mx-auto custom-footer">
+        <h5 class="card-title font-weight-bold">Rahmat Pangestu Widodo</h5>
+        <p class="card-text">
+          Submision Belajar Membuat Front-End Web untuk Pemula
+        </p>
+        <br />
+        <h6>Copyright © 2021 | Made with ❤️</h6>
+      </div>
+      <div class="back-to-top-wrapper">
+        <button onclick="topFunction()" id="myBtn" title="Kembali ke atas">
+          <img src="/assets/ScrollToTop.png" alt="Kembali ke atas" />
+        </button>
+      </div>
+    </main>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/dom.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/scrollOnTop.js"></script>
+  </body>
+</html>
